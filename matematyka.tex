@@ -1,6 +1,7 @@
 \documentclass[a4paper,12pt]{article}
 \usepackage[MeX]{polski}
 \usepackage[utf8]{inputenc}
+\usepackage{algorithmic}
 
 %opening
 \title{\TeX}
@@ -18,19 +19,16 @@ Zapisz w TeX'u poniższe wzory matematyczne, zwróć uwagę na numerowanie tych 
 
 \begin{equation}
 \lim\limits_{n \to \infty} \sum_{ik=1}^n \frac{1}{k^{2}} = \frac{\pi^{2}}{6}
-\label{eq:rownanie}
 \end{equation}
 
 \begin{equation}
 \prod_{i=2}^{n=i^2}=\frac{\lim\nolimits^{n \to 4}(1+\frac{1}{n})^n}{\sum k(\frac{1}{n})}
-\label{eq:rownanie}
 \end{equation}
 
 Łatwo równanie 1 jest doprowadzić do 2
 
 \begin{equation}
 \int_2^\infty\frac{1}{\log_2x}dx=\frac{1}{x}\sin x=1-\cos^2(x)
-\label{eq:rownanie}
 \end{equation}
 
 \begin{equation}
@@ -54,67 +52,101 @@ b_2 \\
 \vdots \\
 b_K
 \end{array}\right]
-\label{eq:rownanie}
 \end{equation}
 
 \begin{equation}
 (a_1=a_1(x))\wedge(a_2=a_2(x))\wedge\dots\wedge(a_k=a_k(x))\Rightarrow(d=d(u))
-\label{eq:rownanie}
 \end{equation}
 
 \begin{equation}
 [x]_A=\{y\in U:a(x)=a(y),\forall a \in A \} \textnormal{, where the central object} \  x \in U
-\label{eq:rownanie}
 \end{equation}
 
 \begin{equation}
 g(u,r)=\{v \in U: \frac{card\{IND(u,v)\}}{card\{A\}|} \geq r \}
-\label{eq:rownanie}
 \end{equation}
 
 \begin{equation}
 \textnormal{where,} \ IND(u,v)= \{ a \in A:a(u)=a(v) \}
-\label{eq:rownanie}
 \end{equation}
 
 \begin{equation}
 T:[0,1] \times [0,1] \rightarrow [0,1]
-\label{eq:rownanie}
 \end{equation}
 
 \begin{equation}
 cos(2\theta )=cos^2\theta - sin^2\theta
-\label{eq:rownanie}
 \end{equation}
 
 \begin{equation}
 \lim\limits_{x \to \infty} \textnormal{exp}(-x)=0
-\label{eq:rownanie}
 \end{equation}
 
 \begin{equation}
 \frac{n!}{k!(n-k)!}={n\choose k}
-\label{eq:rownanie}
 \end{equation}
 
 \begin{equation}
-P\Bigg(A=2\Bigg|\frac{A^2}{B} \> 4 \Bigg)
-\label{eq:rownanie}
+P\Bigg(A=2\Bigg|\frac{A^2}{B} > 4 \Bigg)
 \end{equation}
 
 \begin{equation}
-S^{c_i}(a)=\frac{(\bar{C}^a_i-\hat{C}^a_i)^2}{Z_{{\bar{C}^a_i}^2}+Z_{{\hat{C}^a_i}^2}},a \in A
-\label{eq:rownanie}
+S^{c_i}(a)=\frac{(\bar{C}^a_i-\hat{C}^a_i)^2}{Z_{\bar{C}{^a_i}^2}+Z_{\hat{C}{^a_i}^2}},a \in A
 \end{equation}
 
 \begin{equation}
 C^a_i=\{a(u):u\in U \ and \ d(u) =c_i\}
-\label{eq:rownanie}
 \end{equation}
 
 \begin{equation}
 A_{c_i}(a)=C^a_i \wedge_\varepsilon \{U\backslash C^a_i\}
-\label{eq:rownanie}
 \end{equation}
+
+\begin{equation}
+w(u_q,v_p)w(u_q,v_p)+\frac{|a(u_q)-a(v_p)|}{(max\_attr_a-min\_attr_a)\ast \varepsilon}
+\end{equation}
+
+\begin{equation}
+c'_{ij}= \left\{ 
+\begin{array}{c}
+c_{ij} \ \textnormal{gdy} \ d(x_i) \neq d(x_j) \\
+\phi \textnormal{gdy} d(x_i)=d(x_j).
+\end{array} \right.
+\end{equation}
+
+\begin{algorithmic}
+\STATE{Procedure} 
+\STATE{Input data}
+\STATE{$A'\leftarrow \emptyset$}
+\STATE{$iter \leftarrow 0$}
+\FOR{i=1,2,...,card\{A\}}
+\FOR{j=1,2...,k}
+\STATE{$F^{c_j}(a)=F^{c_j}_i(a)$}
+\IF{$a\notin A'$}{
+\item{$A'\leftarrow a$}
+\item{$iter\leftarrow iter + 1$}
+}
+\IF{$iter=fixed\ number\ of\ the\ best\ genes$}{
+\item{BREAK}
+}
+\ENDIF
+\ENDIF
+\ENDFOR
+\IF{$iter=fixed\ number\ of\ the\ best\ genes$}{
+\item{BREAK}
+}
+\ENDIF
+\ENDFOR
+\RETURN{$A'$}
+\end{algorithmic}
+
+$$
+\left. \begin{array}{c}
+S^{c_1}_1(a)\>S^{c_1}_2(a)>...>S^{c_1}_{card\{A\}}(a) \\
+S^{c_2}_1(a)\>S^{c_2}_2(a)>...>S^{c_2}_{card\{A\}}(a) \\
+\vdots \\
+S^{c_k}_1(a)\>S^{c_k}_2(a)>...>S^{c_k}_{card\{A\}}(a) \\
+\end{array}\right.
+$$
 
 \end{document}
